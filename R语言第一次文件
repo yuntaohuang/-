@@ -1,0 +1,33 @@
+a<-1:1000 #赋值，令a为一一千的整数
+b<-atan(1/a) #用atan函数计算1/a的反正切
+a
+
+
+
+x<-1:1000 #令x为一到一千的数字
+x<-as.numeric(x) #将x的因子转化为数字
+y<-atan(1/x) #令y等于x的倒数的反正切
+z<-1/tan(y) #把值赋给变量z
+z
+
+x==z #使用==验证相等
+identical(x,z) #用identical函数验证相等
+all.equal(x,z) #用all.equal函数验证相等
+all.equal(x,z,tolerance=0) #将容差设置为0，验证相等
+
+
+
+true_and_missing<-c(TRUE,NA) #赋值
+false_and_missing<-c(FALSE,NA) #赋值
+mixed<-c(TRUE,FALSE,NA) #赋值
+any(true_and_missing,false_and_missing,mixed)
+all(true_and_missing,false_and_missing,mixed) #用any,all函数应用于以上每个变量
+
+
+
+options(digits=1) #取整数
+y=runif(100,51,999) #取100个大于50，小于1000的数
+sum(y) #计算加和
+mean(y) #计算平均数
+var(y) #计算方差
+median(y) #计算中位数
